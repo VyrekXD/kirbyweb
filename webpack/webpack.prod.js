@@ -1,24 +1,21 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const { merge } = require('webpack-merge')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
-const common = require('./webpack.config.js')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.config.js');
+const { merge } = require('webpack-merge');
+const path = require('path');
 
 module.exports = merge(common, {
     mode: 'production',
     output: {
         path: path.resolve(__dirname, '../build'),
-        filename: '[contenthash].js',
+        filename: 'app.js',
         publicPath: '/',
-    },
-    performance: {
-        maxEntrypointSize: 400000
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[contenthash].css',
+            filename: 'app.css',
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html',
@@ -36,10 +33,6 @@ module.exports = merge(common, {
         new CleanWebpackPlugin(),
     ],
     optimization: {
-        minimize: true,
-        splitChunks: {
-            chunks: 'all',
-        },
         minimizer: [
             new CssMinimizerPlugin({
                 minimizerOptions: {
@@ -51,7 +44,7 @@ module.exports = merge(common, {
                     ],
                 },
             }),
+            '...'
         ],
     },
-    devtool: 'source-map',
-})
+});

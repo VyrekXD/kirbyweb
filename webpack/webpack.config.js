@@ -1,18 +1,18 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 const config = {
 	entry: path.join(__dirname, '../src/index.tsx'),
 	resolve: {
-		extensions: ['.tsx']
+		extensions: ['.tsx', '...']
 	},
 	module: {
 		rules: [
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader',
-				exclude: '/node_modules/'
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/i,
@@ -22,23 +22,12 @@ const config = {
 						loader: 'css-loader',
 						options: {
 							importLoaders: 1,
-							sourceMap: true,
 						},
 					},
 					'postcss-loader'
 				],
-				exclude: '/node_modules/'
-			},
-			/*{
-				test: /\.(sass|scss)$/i,
-				use: [
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-				],
-				exclude: '/node_modules/'
-			}*/
+				exclude: /node_modules/
+			}
 		]
 	},
 	plugins: [
@@ -46,6 +35,6 @@ const config = {
 			patterns: [{ from: 'public/robots.txt', to: 'robots.txt' }],
 		})
 	]
-}
+};
 
-module.exports = config
+module.exports = config;
