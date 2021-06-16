@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": [
+			"DOM",
+			"ESNext"
+		],
+		"module": "commonjs",
+		"outDir": "./build",
+		"jsx": "react-jsx",
+		"esModuleInterop": true,
+		"strict": true,
+		"sourceMap": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true
+	},
+	"exclude": [
+		"webpack/"
+	],
+	"include": [
+		"src/"
+	]
+}
