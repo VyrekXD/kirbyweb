@@ -2,7 +2,7 @@
 	"name": "kirbyweb",
 	"version": "1.0.0",
 	"description": "La pagina oficial de kirby",
-	"main": "Build/app.js",
+	"main": "build/app.js",
 	"scripts": {
 		"test": "webpack serve --config ./webpack/webpack.dev.js",
 		"build": "webpack --config ./webpack/webpack.prod.js"

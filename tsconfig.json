@@ -7,7 +7,7 @@
 		],
 		"module": "commonjs",
 		"outDir": "./build",
-		"jsx": "react-jsx",
+		"jsx": "react",
 		"esModuleInterop": true,
 		"strict": true,
 		"sourceMap": true,

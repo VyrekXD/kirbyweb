@@ -1,6 +1,9 @@
 module.exports = {
 	mode: 'jit',
-	purge: ['./src/Client/**/*.tsx'],
+	purge: [
+		'./public/index.html',
+		'./src/**/*.tsx'
+	],
 	darkMode: false,
 	theme: {
 		extend: {}
@@ -9,4 +12,4 @@ module.exports = {
 		extend: {}
 	},
 	plugins: []
-}
+};
