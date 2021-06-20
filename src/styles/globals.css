@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.full {
+		weight: 100vw;
+		height: calc(100vh - 80px);
+	}
+
+	.custom_button {
+		width: 160px;
+		font-size: 16px;
+		font-weight: 600;
+		color: #fff;
+		cursor: pointer;
+		margin: 20px;
+		height: 55px;
+		text-align: center;
+		border: none;
+		background-size: 300% 100%;
+		border-radius: 50px;
+		moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-webkit-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+
+	.custom_button:hover {
+		background-position: 100% 0;
+		moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-webkit-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+
+	.custom_button:focus {
+		outline: none;
+	}
+
+	.custom_button.color {
+		background-image: linear-gradient(
+			to right,
+			#eb3941,
+			#f15e64,
+			#e14e53,
+			#e2373f
+		);
+		box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+	}
+}
