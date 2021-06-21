@@ -5,3 +5,5 @@ package-lock.json
 # Build
 .next/
 
+# Editor
+.vscode/

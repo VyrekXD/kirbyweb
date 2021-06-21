@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { useEffect, Fragment } from 'react'
 import AOS from 'aos'
-import '../styles/globals.css'
+import '../styles/tailwind.css'
 
 import Head from 'next/head'
 import Navbar from '../components/navbar'

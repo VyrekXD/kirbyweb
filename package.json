@@ -6,7 +6,9 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"type-check": "tsc --pretty --noEmit",
+		"format": "prettier --write ."
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
@@ -22,7 +24,6 @@
 		"eslint-config-next": "11.0.0",
 		"postcss": "^8.3.5",
 		"postcss-flexbugs-fixes": "^5.0.2",
-		"postcss-preset-env": "^6.7.0",
 		"tailwindcss": "^2.2.2",
 		"typescript": "4.3.4"
 	}
