@@ -18,6 +18,12 @@ class KirbyDocument extends Document {
 		return (
 			<Html>
 				<Head>
+					<meta name='theme-color' content='#fc9c9c' />
+					<meta
+						content='Kirby - Bot de Starboards'
+						property='og:title'
+					/>
+
 					<link rel='preconnect' href='https://fonts.gstatic.com' />
 					<link
 						href='https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap'

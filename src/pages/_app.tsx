@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	})
 
 	return (
-		<Fragment>
+		<div className='overflow-hidden'>
 			<Head>
 				<title>Kirby - Bot de Starboards</title>
 				<link
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 			<Navbar />
 			<Component {...pageProps} />
-		</Fragment>
+		</div>
 	)
 }
 

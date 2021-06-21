@@ -3,7 +3,7 @@ import { NavbarLink, Logo } from './components'
 export default function Navbar() {
 	return (
 		<nav className='w-full h-20 bg-pink-main items-center mx-auto'>
-			<div className='flex justify-between items-center flex-col md:flex-row'>
+			<div className='flex justify-between lg:items-center flex-col md:flex-row'>
 				<Logo
 					imageSrc='/kirby_logo.png'
 					alt='Kirby Logo'

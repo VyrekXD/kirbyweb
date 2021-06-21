@@ -9,19 +9,22 @@ export const Logo: React.FC<{
 	text: string
 }> = (props) => {
 	return (
-		<div className={'flex items-center my-2 mx-4'} data-aos='fade-right'>
+		<div
+			className={'flex items-center my-2 mx-4 md:my-4 md:mx-6'}
+			data-aos='fade-right'
+		>
 			<Image
 				src={props.imageSrc}
 				alt={props.alt}
-				height='50'
-				width='50'
+				height={50}
+				width={50}
 				className='rounded-full'
 			/>
 
 			<Link href={props.link}>
 				<a
 					className={
-						'text-2xl font-bold text-red-light hover:underline hover:text-red-main px-3 font-primary_font'
+						'text-3xl font-bold text-red-light hover:underline hover:text-red-main px-3 font-primary_font'
 					}
 				>
 					{props.text}
